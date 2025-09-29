@@ -9,7 +9,7 @@ const TestFetch = () => {
   },[]);
 
   const loadUsersData = async ()=>{
-return await axios.get("https://agussarifudin.github.io/json-server-api/json-server-api")
+return await axios.get("https://agussarifudin.github.io/json-server-api/db.json")
 .then((response)=>setData(response.data))
 .catch((err)=>console.log(err))
   }
