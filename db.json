@@ -1,11 +1,22 @@
 {
-    "berita":[{
-        "judul":"ASAsss",
-        "website":"linkkkk"
+  "berita": [
+    {
+      "judul": "testtst",
+      "tanggal": "23 Agustus",
+      "website": "link",
+      "id": 1
+    },
+    {
+      "judul": "testtst",
+      "tanggal": "23 Agustus",
+      "website": "link",
+      "id": 2
+    },
+    {
+      "judul": "testtst",
+      "tanggal": "23 Agustus",
+      "website": "link",
+      "id": 3
     }
-        ,{
-        "judul":"ASAsss",
-        "website":"linkkkk"
-        }
-    ]
+  ]
 }
