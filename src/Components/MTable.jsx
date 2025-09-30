@@ -73,7 +73,9 @@ const [page, setPage] = React.useState(0);
               </TableCell>
 
               <TableCell>{row.joinDate}</TableCell>
-              
+              <TableCell>{row.joinDate}</TableCell>
+              <TableCell>{row.joinDate}</TableCell>
+
               <TableCell><Typography fontWeight={"bold"} fontSize={"0.75rem"} color={'white'} 
                 style={{
                     backgroundColor:
