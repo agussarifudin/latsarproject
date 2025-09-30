@@ -1,6 +1,6 @@
 body{
   font-family: "Playpen Sans", cursive;
-  background-color: #2f2b2b;
+  background-color: #003899;
   color: #fff;
 }
 
@@ -87,7 +87,7 @@ table td {
 }
 
 table tr:hover {
-  background-color: #3f3c3c;
+  background-color: #fffb00;
 }
 
 tr th {
@@ -98,7 +98,7 @@ table th{
   padding-top: 12px;
   padding-bottom:12px;
   text-align: left;
-  background-color: #04aa6d;
+  background-color: #1937cd;
   color: white;
   font-weight: 600
 }
