@@ -16,7 +16,10 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-    
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import InputAdornment from '@mui/material/InputAdornment';
+
 
 
 let USERS = [], STATUSES = ['Active','Pending','Blocked'];
@@ -78,9 +81,27 @@ const [page, setPage] = React.useState(0);
   </LocalizationProvider>
   </div>
   <div style={{paddingLeft:10}}>
-    <Button variant="outlined">Cari</Button>
+    <Fab variant="extended">
+  <NavigationIcon sx={{ mr: 1 }} />
+  Rekap
+</Fab>
   </div>
-
+<div style={{paddingLeft:10,paddingBottom:10}}>
+   <TextField
+   
+          label="Bulan"
+          disabled="true"
+          value={"3"}
+          id="filled-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="start">Desember Total</InputAdornment>,
+            },
+          }}
+          variant="filled"
+        />
+</div>
       </div>
     
       <Table sx={{ minWidth: 650 }} aria-label="simple table" >
