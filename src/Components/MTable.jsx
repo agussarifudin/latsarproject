@@ -71,7 +71,7 @@ const [page, setPage] = React.useState(0);
   return (
     <div style={{display:"flex",justifyContent:"center"}}>
         
-    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:950,tableLayout:"fixed",overflowX:"auto",display:"block"}}>
+    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1100,tableLayout:"fixed",overflowX:"auto",display:"block"}}>
       <div style={{paddingTop:10,paddingLeft:10,paddingBottom:10,justifyContent:"left",display:"flex"}}>
   <TextField id="outlined-basic" label="Search" variant="outlined" />
   
@@ -104,15 +104,22 @@ const [page, setPage] = React.useState(0);
 </div>
       </div>
     
-      <Table sx={{ minWidth: 650 }} aria-label="simple table" >
+      <Table  aria-label="simple table" >
         <TableHead style={{fontWeight:"bold", color:"black"}}>
           <TableRow >
+     
+            
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Judul</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Tanggal</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Website</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Instagram</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>X / Twitter</Typography></TableCell>
           <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Kompasiana</Typography></TableCell>
+           <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Facebook</Typography></TableCell>
+            <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Teras Maluku</Typography></TableCell>
+            <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Maluku Terkini</Typography></TableCell>
+          <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>RRI</Typography></TableCell>
+          
           </TableRow>
         </TableHead>
         <TableBody>
@@ -121,19 +128,22 @@ const [page, setPage] = React.useState(0);
               key={row.id}
               
             >
+             
               <TableCell >
                 <Typography fontWeight={"bold"}>{row.judul}</Typography>
               </TableCell>
-
               <TableCell >
                 {row.tanggal}
               </TableCell>
-
-              <TableCell> <Button variant="contained" href={row.website}>Link</Button></TableCell>
+              
+              <TableCell><Button variant="contained" href={row.website}>Link</Button></TableCell>
               <TableCell><Button variant="contained" href={row.instagram}>Link</Button></TableCell>
               <TableCell><Button variant="contained" href={row.twitter}>Link</Button></TableCell>
               <TableCell><Button variant="contained" href={row.kompasiana}>Link</Button></TableCell>
-
+              <TableCell><Button variant="contained" href={row.facebook}>Link</Button></TableCell>
+              <TableCell><Button variant="contained" href={row.terasmaluku}>Link</Button></TableCell>
+              <TableCell><Button variant="contained" href={row.malukuterkini}>Link</Button></TableCell>
+              <TableCell><Button variant="contained" href={row.rri}>Link</Button></TableCell>
               
                 {/* <Typography fontWeight={"bold"} fontSize={"0.75rem"} color={'white'} 
                 style={{
