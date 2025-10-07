@@ -38,7 +38,7 @@ for(let i=0;i<14;i++){
 }
 
 
-const MTable = () => {
+const MTableGitHub = () => {
 
   let date = Date()
 const [tanggal,setTanggal]=useState(dayjs(date))
@@ -59,7 +59,7 @@ const [bulan,setBulan]=useState()
 
    async function loadUsersData() {
       
-      const url = 'http://localhost:3004/berita'; // Replace with your JSON server URL
+      const url = 'https://agussarifudin.github.io/latsarproject/db.json'; // Replace with your JSON server URL
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -67,7 +67,7 @@ const [bulan,setBulan]=useState()
         const jumlahRecord = data.length
         setBulan(["-"])
         setJumlah(jumlahRecord)
-        setData(data)
+        setData(data.berita)
        
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -289,4 +289,4 @@ const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
   );
 }
 
-export default MTable
+export default MTableGitHub
