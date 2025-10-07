@@ -59,7 +59,7 @@ const [bulan,setBulan]=useState()
 
    async function loadUsersData() {
       
-      const url = 'https://agussarifudin.github.io/latsarproject/db.json'; // Replace with your JSON server URL
+      const url = 'https://agussarifudin.github.io/latsarproject/db-github.json'; // Replace with your JSON server URL
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -67,7 +67,7 @@ const [bulan,setBulan]=useState()
         const jumlahRecord = data.length
         setBulan(["-"])
         setJumlah(jumlahRecord)
-        setData(data.berita)
+        setData(data)
        
       } catch (error) {
         console.error('Error fetching data:', error);
