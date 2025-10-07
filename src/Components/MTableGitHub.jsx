@@ -88,7 +88,7 @@ const [bulan,setBulan]=useState()
   };
 
   const handleClickTanggal = async (event)=> {
-      const url = `http://localhost:3004/berita?hari=${tanggal.$D}&bulan=${tanggal.$M+1}`;
+      const url = `http://localhost:3004/berita?hari=${tanggal.$D}`;
       const urlBulan = `http://localhost:3004/berita?bulan=${tanggal.$M+1}`
       // Replace with your JSON server URL
     setValueSearch("")

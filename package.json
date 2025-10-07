@@ -19,6 +19,7 @@
     "dayjs": "^1.11.18",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.3",
     "react-scripts": "5.0.1",
     "react-virtuoso": "^4.14.1",
     "styled-components": "^6.1.19",
@@ -30,8 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": " json-server --watch db.json --port 8000",
-    "dev": "concurrently \"json-server --watch db.json --port 8000\" \"react-scripts start\""
+    "server": "json-server --watch db.json --port 3004",
+    "dev": "concurrently \"json-server --watch db.json --port 5000\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": [
