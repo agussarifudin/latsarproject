@@ -17,7 +17,7 @@ function App() {
       {/* <DataFetch/> */}
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MTableGitHub/>}></Route>
+        <Route path='/' element={<Table/>}></Route>
         <Route path='/create' element={<Create/>}></Route>
       </Routes>
       </BrowserRouter>
