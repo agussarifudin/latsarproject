@@ -59,7 +59,7 @@ const [bulan,setBulan]=useState()
 
    async function loadUsersData() {
       
-      const url = 'https://agussarifudin.github.io/latsarproject/db-github.json'; // Replace with your JSON server URL
+      const url = 'https://my-json-server.typicode.com/agussarifudin/latsarproject/berita'; // Replace with your JSON server URL
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -88,8 +88,8 @@ const [bulan,setBulan]=useState()
   };
 
   const handleClickTanggal = async (event)=> {
-      const url = `http://localhost:3004/berita?hari=${tanggal.$D}`;
-      const urlBulan = `http://localhost:3004/berita?bulan=${tanggal.$M+1}`
+      const url = `https://my-json-server.typicode.com/agussarifudin/latsarproject/berita?hari=${tanggal.$D}`;
+      const urlBulan = `https://my-json-server.typicode.com/agussarifudin/latsarproject/berita?bulan=${tanggal.$M+1}`
       // Replace with your JSON server URL
     setValueSearch("")
       try {
@@ -121,7 +121,7 @@ const [bulan,setBulan]=useState()
   }
 
   const handleReset = async()=>{
-const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
+const url = `https://my-json-server.typicode.com/agussarifudin/latsarproject/berita`; // Replace with your JSON server URL
     setValueSearch("")
       try {
         const response = await fetch(url);
@@ -139,7 +139,7 @@ const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
   const handleSearch = async (e)=> {
     console.log(valueSearch)
       
-      const url = `http://localhost:3004/berita?q=${valueSearch}`; // Replace with your JSON server URL
+      const url = `https://my-json-server.typicode.com/agussarifudin/latsarproject/berita?q=${valueSearch}`; // Replace with your JSON server URL
       try {
         const response = await fetch(url);
         const data = await response.json();

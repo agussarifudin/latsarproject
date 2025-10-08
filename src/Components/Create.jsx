@@ -25,7 +25,7 @@ const Create = () => {
 
     const handleSubmit = (event)=>{
         event.preventDefault();
-        axios.post('http://localhost:8000/berita',inputData)
+        axios.post('http://localhost:3004/berita',inputData)
         .then(res=>{
             alert("data posted")
         })
@@ -46,6 +46,15 @@ const Create = () => {
                 <div style={{paddingTop:10}}>
 <TextField id="outlined-basic" label="Tanggal" variant="outlined" onChange={e=> setInputData({...inputData, tanggal: e.target.event})}/>
                 </div>
+                <div style={{paddingTop:10}}>
+<TextField id="outlined-basic" label="Hari" variant="outlined" onChange={e=> setInputData({...inputData, tanggal: e.target.event})}/>
+                </div>
+                <div style={{paddingTop:10}}>
+<TextField id="outlined-basic" label="Bulan" variant="outlined" onChange={e=> setInputData({...inputData, tanggal: e.target.event})}/>
+                </div>
+                <div style={{paddingTop:10}}>
+<TextField id="outlined-basic" label="Tahun" variant="outlined" onChange={e=> setInputData({...inputData, tanggal: e.target.event})}/>
+                </div>
                   <div style={{paddingTop:10}}>
 <TextField id="outlined-basic" label="Website" variant="outlined" onChange={e=> setInputData({...inputData, website: e.target.event})}/>
                 </div>
@@ -56,11 +65,12 @@ const Create = () => {
 <TextField id="outlined-basic" label="X / Twitter" variant="outlined" onChange={e=> setInputData({...inputData, twitter : e.target.event})}/>
                 </div>
                 <div style={{paddingTop:10}}>
-<TextField id="outlined-basic" label="Kompasiana" variant="outlined" onChange={e=> setInputData({...inputData, kompasiana: e.target.event})}/>
-                </div>
-                <div style={{paddingTop:10}}>
 <TextField id="outlined-basic" label="Facebook" variant="outlined" onChange={e=> setInputData({...inputData, facebook: e.target.event})}/>
                 </div>
+                <div style={{paddingTop:10}}>
+<TextField id="outlined-basic" label="Kompasiana" variant="outlined" onChange={e=> setInputData({...inputData, kompasiana: e.target.event})}/>
+                </div>
+                
 
                 <div style={{paddingTop:10}}>
 <TextField id="outlined-basic" label="Teras Maluku" variant="outlined" onChange={e=> setInputData({...inputData, terasmaluku: e.target.event})}/>
