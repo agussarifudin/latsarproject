@@ -1,5 +1,4 @@
-{
-  "berita": [
+export const dataBerita =  [
     {
       "judul": "Posbankum Masuk Desa: Kolaborasi Nyata Kemenkum Maluku dan Gubernur",
       "tanggal": "2-10-2025",
@@ -273,4 +272,3 @@
       "rri": ""
     }
   ]
-}

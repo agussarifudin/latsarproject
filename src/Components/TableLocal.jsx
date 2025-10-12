@@ -20,8 +20,8 @@ import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import InputAdornment from '@mui/material/InputAdornment';
 import Box  from '@mui/material/Tab';
-
-
+import {dataBerita} from "./DataLocal"
+import LogoPengayoman from "../Flag_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.svg.png"
 
 let USERS = [], STATUSES = ['Active','Pending','Blocked'];
 for(let i=0;i<14;i++){
@@ -60,19 +60,21 @@ const [bulan,setBulan]=useState()
 
    async function loadUsersData() {
       
-      const url = 'http://localhost:3004/berita'; // Replace with your JSON server URL
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
+    setData(dataBerita)
+
+    //   const url = 'http://localhost:3004/berita'; // Replace with your JSON server URL
+    //   try {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
        
-        const jumlahRecord = data.length
-        setBulan(["-"])
-        setJumlah(jumlahRecord)
-        setData(data)
+    //     const jumlahRecord = data.length
+    //     setBulan(["-"])
+    //     setJumlah(jumlahRecord)
+    //     setData(data)
        
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
     }
 
   const [page, setPage] = React.useState(0);
@@ -89,18 +91,8 @@ const [bulan,setBulan]=useState()
   };
 
   const handleClickTanggal = async (event)=> {
-      const url = `http://localhost:3004/berita?hari=${tanggal.$D}&bulan=${tanggal.$M+1}`;
-      const urlBulan = `http://localhost:3004/berita?bulan=${tanggal.$M+1}`
-      // Replace with your JSON server URL
-    setValueSearch("")
-      try {
-        const response = await fetch(url);
-        const responseBulan = await fetch(urlBulan);
-        const data = await response.json();
-        const dataBulan = await responseBulan.json();
-        const jumlahRecord = dataBulan.length
-        console.log(tanggal.$M,"databulan")
-        tanggal.$M === 0 ? setBulan("Januari"):
+    setPage(0)
+         tanggal.$M === 0 ? setBulan("Januari"):
         tanggal.$M === 1 ? setBulan("Februari"):
         tanggal.$M === 2 ? setBulan("Maret"):
         tanggal.$M === 3 ? setBulan("April"):
@@ -112,58 +104,108 @@ const [bulan,setBulan]=useState()
         tanggal.$M === 9 ? setBulan("Oktober"):
         tanggal.$M === 10 ? setBulan("November"):
         tanggal.$M === 11 ? setBulan("Desember"):setBulan("-")
-        setJumlah(jumlahRecord)
-        setData(data)
+
+    const filterTanggal = data.filter((item)=>{
+        return item.hari === tanggal.$D && item.bulan===tanggal.$M+1
+    })
+ const filterBulan = data.filter((item)=>{
+        return item.bulan === tanggal.$M+1
+    })
+
+    const jumlahRecord = filterBulan.length
+    setJumlah(jumlahRecord)
+    setData(filterTanggal)
+
+
+
+
+
+
+    //   const url = `http://localhost:3004/berita?hari=${tanggal.$D}&bulan=${tanggal.$M+1}`;
+    //   const urlBulan = `http://localhost:3004/berita?bulan=${tanggal.$M+1}`
+    //   // Replace with your JSON server URL
+    // setValueSearch("")
+    //   try {
+    //     const response = await fetch(url);
+    //     const responseBulan = await fetch(urlBulan);
+    //     const data = await response.json();
+    //     const dataBulan = await responseBulan.json();
+    //     const jumlahRecord = dataBulan.length
+    //     console.log(tanggal.$M,"databulan")
+    //     tanggal.$M === 0 ? setBulan("Januari"):
+    //     tanggal.$M === 1 ? setBulan("Februari"):
+    //     tanggal.$M === 2 ? setBulan("Maret"):
+    //     tanggal.$M === 3 ? setBulan("April"):
+    //     tanggal.$M === 4 ? setBulan("Mei"):
+    //     tanggal.$M === 5 ? setBulan("Juni"):
+    //     tanggal.$M === 6 ? setBulan("Juli"):
+    //     tanggal.$M === 7 ? setBulan("Agustus"):
+    //     tanggal.$M === 8 ? setBulan("September"):
+    //     tanggal.$M === 9 ? setBulan("Oktober"):
+    //     tanggal.$M === 10 ? setBulan("November"):
+    //     tanggal.$M === 11 ? setBulan("Desember"):setBulan("-")
+    //     setJumlah(jumlahRecord)
+    //     setData(data)
         
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
 
   }
 
   const handleReset = async()=>{
-const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
+
     setValueSearch("")
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const jumlahRecord = data.length
+    setData(dataBerita)
+// const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
+//     setValueSearch("")
+//       try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         const jumlahRecord = data.length
      
 
-        setJumlah(jumlahRecord)
-        setData(data)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+//         setJumlah(jumlahRecord)
+//         setData(data)
+//       } catch (error) {
+//         console.error('Error fetching data:', error);
+//       }
   }
 
   const handleSearch = async (e)=> {
-    console.log(valueSearch)
+    setPage(0)
+   
+    const searchList = data.filter((item)=>{
+        return item.judul.toLowerCase().indexOf(valueSearch.toLowerCase()) !== -1;
+    })
+    
+    setData(searchList)
+
+    
       
-      const url = `http://localhost:3004/berita?q=${valueSearch}`; // Replace with your JSON server URL
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const jumlahRecord = data.length
+    //   const url = `http://localhost:3004/berita?q=${valueSearch}`; // Replace with your JSON server URL
+    //   try {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
+    //     const jumlahRecord = data.length
      
 
-        setJumlah(jumlahRecord)
-        setData(data)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    //     setJumlah(jumlahRecord)
+    //     setData(data)
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
   }
-
-
 
   return (
 
    
     
     <div style={{display:"flex",justifyContent:"center"}}>
-      
+        
         {console.log(data)}
     <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1100,tableLayout:"fixed",overflowX:"auto",display:"block"}}>
+        
       <div style={{paddingTop:10,paddingLeft:10,paddingBottom:10,justifyContent:"left",display:"flex"}}>
 <div style={{paddingLeft:10,paddingBottom:10}}>
 <TextField sx={{ "& .MuiInputBase-input": { display:"flex",minWidth:200 } }} id="outlined-basic" label="Search" variant="outlined" value={valueSearch} onChange={(e)=> setValueSearch(e.target.value)}/>

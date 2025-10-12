@@ -5,6 +5,7 @@ import TestFetch from "./TestFetch";
 import DataFetch from './DataFetch';
 import Table from './Components/MTable.jsx'
 import MTableGitHub from './Components/MTableGitHub.jsx'
+import TableLocal from './Components/TableLocal.jsx'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Create from './Components/Create.jsx';
 
@@ -17,7 +18,7 @@ function App() {
       {/* <DataFetch/> */}
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Table/>}></Route>
+        <Route path='/' element={<TableLocal/>}></Route>
         <Route path='/create' element={<Create/>}></Route>
       </Routes>
       </BrowserRouter>
