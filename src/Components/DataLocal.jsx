@@ -1,4 +1,80 @@
 export const dataBerita =  [
+  
+    {
+      "judul": "Kanwil Kemenkum Maluku Serahkan Naskah Akademik dan Rancangan Perda Cadangan Pangan SBB",
+      "tanggal": "1-10-2025",
+      "hari": 1,
+      "bulan": 10,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/kanwil-kemenkum-maluku-serahkan-naskah-akademik-dan-rancangan-perda-cadangan-pangan-sbb",
+      "instagram": "https://www.instagram.com/p/DPQjDVdk7MT/?igsh=Nm8zazMzYnFqbmo=",
+      "twitter": "https://x.com/kemenkummaluku/status/1973294389909922151?t=6hd3V0iPTemqQex_UNilTg&s=19",
+      "facebook": "https://m.facebook.com/story.php?story_fbid=pfbid0GwZLk8rvNiUswysDj8wWUVG1dttzGVr7bXyXcZZVKTaZA3ZGwcb5p2XTjxqSmNsbl&id=100062597052913&mibextid=ZbWKwL",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/68dcf3b1c925c4201818aec3/kanwil-kemenkum-maluku-serahkan-naskah-akademik-dan-rancangan-perda-cadangan-pangan-sbb",
+      "terasmaluku": "https://terasmaluku.com/daerahku/2025/10/01/kanwil-kemenkum-maluku-serahkan-naskah-akademik-dan-rancangan-perda-cadangan-pangan-sbb/",
+      "malukuterkini": "",
+      "rri": ""
+    },
+    {
+      "judul": "PPPK Resmi Bergabung, Kementerian Hukum Dapat Suntikan Energi Baru",
+      "tanggal": "1-10-2025",
+      "hari": 1,
+      "bulan": 10,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/pppk-resmi-bergabung-kementerian-hukum-dapat-suntikan-energi-baru",
+      "instagram": "https://www.instagram.com/p/DPQqjbak9OE/?igsh=bGl0a3F5Y3ZrdmJs",
+      "twitter": "https://x.com/kemenkummaluku/status/1973309882364551307?t=jjXAIUpRD6ZB38ZAM9is4Q&s=19",
+      "facebook": "https://m.facebook.com/story.php?story_fbid=pfbid08qr1JTkFTR5UJjnvhzPjVV5F9hDVyRHadGMqcp8MsxArMEyKHg6zWTgNEPd5KatUl&id=100062597052913&mibextid=ZbWKwL",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/68dd0ca334777c4adc24c012/pppk-resmi-bergabung-kementerian-hukum-dapat-suntikan-energi-baru",
+      "terasmaluku": "https://terasmaluku.com/nasional/2025/10/01/pppk-resmi-bergabung-kementerian-hukum-dapat-suntikan-energi-baru/",
+      "malukuterkini": "https://www.malukuterkini.com/2025/10/01/pppk-bergabung-kanwil-kemenkum-maluku-dapat-suntikan-energi-baru/",
+      "rri": "https://rri.co.id/ambon/daerah/1874241/pppk-resmi-bergabung-kementerian-hukum-dapat-suntikan-energi-baru"
+    },
+    {
+      "judul": "Peringati Hari Kesaktian Pancasila, Kanwil Kemenkum Maluku Teguhkan Semangat Nasionalisme",
+      "tanggal": "1-10-2025",
+      "hari": 1,
+      "bulan": 10,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/peringati-hari-kesaktian-pancasila-kanwil-kemenkum-maluku-teguhkan-semangat-nasionalisme",
+      "instagram": "https://www.instagram.com/p/DPQcph4E0wl/?igsh=ZGR6empxZ2ZiMjZ0",
+      "twitter": "https://x.com/kemenkummaluku/status/1973278899598655736?t=u2KbE89iD00APdfFvgyHng&s=19",
+      "facebook": "https://m.facebook.com/story.php?story_fbid=pfbid02xi5Gg2KnGbB9SxUp63uKQ1ukgg7UDVmhsW9PKiRorXLZv3ZSVJdq3mzdR4pngK4kl&id=100062597052913&mibextid=ZbWKwL",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/68dc974a34777c35d562d352/peringati-hari-kesaktian-pancasila-kanwil-kemenkum-maluku-teguhkan-semangat-nasionalisme",
+      "terasmaluku": "https://terasmaluku.com/ambonku/2025/10/01/peringati-hari-kesaktian-pancasila-kanwil-kemenkum-maluku-teguhkan-semangat-nasionalisme/",
+      "malukuterkini": "https://www.malukuterkini.com/2025/10/01/peringati-hari-kesaktian-pancasila-ini-penegasan-kanwil-kemenkum-maluku/",
+      "rri": "https://rri.co.id/ambon/daerah/1874036/kanwil-kemenkum-teguhkan-semangat-nasionalisme-di-hari-kesaktian-pancasila"
+    },
+    {
+      "judul": "Percepat Pembentukan Posbankum Desa dan Kelurahan, Kanwil Kemenkum Maluku Singgahi SBB",
+      "tanggal": "1-10-2025",
+      "hari": 1,
+      "bulan": 10,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/percepat-pembentukan-posbankum-desa-dan-kelurahan-kanwil-kemenkum-maluku-singgahi-sbb",
+      "instagram": "https://www.instagram.com/p/DPQiUg0EzXB/?igsh=a2ZzbzcxNnV6d3Rq",
+      "twitter": "https://x.com/kemenkummaluku/status/1973293024076767355?t=UPyLPupm-3vFqwxjInDO_w&s=19",
+      "facebook": "https://www.facebook.com/share/p/169M4YjTqH/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/68dcdb6034777c2c2f014945/percepat-pembentukan-posbankum-desa-dan-kelurahan-kanwil-kemenkum-maluku-singgahi-sbb",
+      "terasmaluku": "https://terasmaluku.com/daerahku/2025/10/01/percepat-pembentukan-posbankum-desa-dan-kelurahan-kepala-kanwil-kemenkum-maluku-sambangi-sbb/",
+      "malukuterkini": "",
+      "rri": ""
+    },
+    {
+      "judul": "Optimalisasi Anggaran: Kemenkum Maluku Ikut Penyusunan RPD Triwulan IV Secara Virtual",
+      "tanggal": "1-10-2025",
+      "hari": 1,
+      "bulan": 10,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/optimalisasi-anggaran-kemenkum-maluku-ikut-penyusunan-rpd-triwulan-iv-secara-virtual",
+      "instagram": "https://www.instagram.com/p/DPQq0qIE4RS/?igsh=MTl0aG16eHNmYWl2dA==",
+      "twitter": "https://x.com/kemenkummaluku/status/1973310101319831684?s=19",
+      "facebook": "https://www.facebook.com/share/p/16Bv7h9HdU/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/68dd1beded64151bb43cbb94/optimalisasi-anggaran-kemenkum-maluku-ikut-penyusunan-rpd-triwulan-iv-secara-virtual",
+      "terasmaluku": "https://terasmaluku.com/ekonomi/2025/10/01/optimalisasi-anggaran-kemenkum-maluku-ikut-penyusunan-rpd-triwulan-iv/",
+      "malukuterkini": "https://www.malukuterkini.com/2025/10/01/optimalisasi-anggaran-ini-harapan-kakanwil-kemenkum-maluku/",
+      "rri": "https://rri.co.id/ambon/daerah/1874263/optimalisasi-anggaran-kemenkum-maluku-ikut-penyusunan-rpd"
+    },
     {
       "judul": "Posbankum Masuk Desa: Kolaborasi Nyata Kemenkum Maluku dan Gubernur",
       "tanggal": "2-10-2025",
@@ -255,20 +331,6 @@ export const dataBerita =  [
       "terasmaluku": "",
       "malukuterkini": "https://www.malukuterkini.com/2025/10/04/anggota-dpr-ri-kunjungi-booth-layanan-kanwil-kemenkum-di-maluku-manggurebe-2025/",
       "rri": "https://rri.co.id/ambon/daerah/1880734/anggota-dprri-kunjungibooth-layanan-kemenkum-di-maluku-manggurebe"
-    },
-    {
-      "judul": "",
-      "tanggal": "5-10-2025",
-      "hari": 5,
-      "bulan": 10,
-      "tahun": 2025,
-      "website": "",
-      "instagram": "",
-      "twitter": "",
-      "facebook": "",
-      "kompasiana": "",
-      "terasmaluku": "",
-      "malukuterkini": "",
-      "rri": ""
     }
+    
   ]

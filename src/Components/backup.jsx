@@ -50,8 +50,8 @@ const [publikasi,setPublikasi]=useState()
 
    async function loadUsersData() {
       
-    setData(dataBerita.sort((a,b)=>a.hari-b.hari)) // BUAT NGURUTKAN <<<<<<<<<<<<
-    setJumlah(dataBerita.length)
+    setData(dataBerita)
+
   
 
 
@@ -107,36 +107,11 @@ const [publikasi,setPublikasi]=useState()
         return item.bulan === tanggal.$M+1
     })
     
-    bulanAtauTanggal === "tanggal" ? setData(filterTanggal.sort((a,b)=>a.hari-b.hari)):setData(filterBulan.sort((a,b)=>a.hari-b.hari)); setJumlah(filterBulan.length)
+    bulanAtauTanggal === "tanggal" ? setData(filterTanggal):setData(filterBulan)
     // const jumlahRecord = filterBulan.length
     // setJumlah(jumlahRecord)
     
-      let count = 0
-    if(bulanAtauTanggal === "tanggal"){
-  for(let i=0;i<filterTanggal.length;i++){
-    filterTanggal[i].website === ""?count=count:count+=1
-    filterTanggal[i].instagram === ""?count=count:count+=1
-    filterTanggal[i].twitter === ""?count=count:count+=1
-    filterTanggal[i].kompasiana === ""?count=count:count+=1
-    filterTanggal[i].facebook === ""?count=count:count+=1
-    filterTanggal[i].terasmaluku === ""?count=count:count+=1
-    filterTanggal[i].malukuterkini === ""?count=count:count+=1
-    filterTanggal[i].rri === ""?count=count:count+=1
-  }
-    }else{
-      for(let i=0;i<filterBulan.length;i++){
-    filterBulan[i].website === ""?count=count:count+=1
-    filterBulan[i].instagram === ""?count=count:count+=1
-    filterBulan[i].twitter === ""?count=count:count+=1
-    filterBulan[i].kompasiana === ""?count=count:count+=1
-    filterBulan[i].facebook === ""?count=count:count+=1
-    filterBulan[i].terasmaluku === ""?count=count:count+=1
-    filterBulan[i].malukuterkini === ""?count=count:count+=1
-    filterBulan[i].rri === ""?count=count:count+=1
-  }
-    }
-
-  setPublikasi(count)
+    
 
 
 
@@ -179,8 +154,6 @@ const [publikasi,setPublikasi]=useState()
     setActive(false)
     setValueSearch("")
     setData(dataBerita)
-    setPublikasi("-")
-    
 // const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
 //     setValueSearch("")
 //       try {
@@ -203,7 +176,7 @@ const [publikasi,setPublikasi]=useState()
     const searchList = data.filter((item)=>{
         return item.judul.toLowerCase().indexOf(valueSearch.toLowerCase()) !== -1;
     })
-    setData(searchList.sort((a,b)=>a.hari-b.hari))
+    setData(searchList)
 
   let count = 0
 
@@ -271,7 +244,7 @@ const [publikasi,setPublikasi]=useState()
 <DatePicker disabled={active} label="Tanggal" value={tanggal} onChange={(newValue)=>setTanggal(newValue,setBulanAtauTanggal("tanggal"))} views={[ "day","month"]} format="DD-MM-YYYY" />
   <div style={{paddingTop:10}}>
  
-      <DatePicker disabled={active} label="Bulan" value={tanggal} onChange={(newValue)=>setTanggal(newValue,setBulanAtauTanggal("bulan"))} views={[ "month"]}  />
+      <DatePicker disabled={active} label="Tanggal" value={tanggal} onChange={(newValue)=>setTanggal(newValue,setBulanAtauTanggal("bulan"))} views={[ "month"]}  />
 
 
   </div>
