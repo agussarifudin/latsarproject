@@ -1,7 +1,9 @@
 body{
   font-family: "Playpen Sans", cursive;
-  background-color: #3f59ff;
+  background:linear-gradient(transparent,rgb(0, 64, 255));
   color: #fff;
+ 
+
 }
 
 

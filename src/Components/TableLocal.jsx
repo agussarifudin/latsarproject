@@ -180,7 +180,7 @@ const [publikasi,setPublikasi]=useState()
     setValueSearch("")
     setData(dataBerita)
     setPublikasi("-")
-    
+    setBulanAtauTanggal("")
 // const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
 //     setValueSearch("")
 //       try {
@@ -329,8 +329,8 @@ const [publikasi,setPublikasi]=useState()
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Website</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Instagram</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>X / Twitter</Typography></TableCell>
+            <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Facebook</Typography></TableCell>
           <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Kompasiana</Typography></TableCell>
-           <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Facebook</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Teras Maluku</Typography></TableCell>
             <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>Maluku Terkini</Typography></TableCell>
           <TableCell ><Typography color='yellow' fontWeight={"bold"} textAlign={"center"}>RRI</Typography></TableCell>
@@ -354,8 +354,8 @@ const [publikasi,setPublikasi]=useState()
               <TableCell><Button variant="contained" color={row.website===""?'error':"primary"}href={row.website}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.instagram===""?'error':"primary"}href={row.instagram}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.twitter===""?'error':"primary"}href={row.twitter}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.kompasiana===""?'error':"primary"}href={row.kompasiana}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.facebook===""?'error':"primary"}href={row.facebook}>Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.kompasiana===""?'error':"primary"}href={row.kompasiana}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.terasmaluku===""?'error':"primary"} href={row.terasmaluku}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.malukuterkini===""?'error':"primary"}href={row.malukuterkini}>Link</Button></TableCell>
               <TableCell><Button variant="contained" color={row.rri===""?'error':"primary"}href={row.rri}>Link</Button></TableCell>
