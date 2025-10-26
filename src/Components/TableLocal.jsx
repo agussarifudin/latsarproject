@@ -49,8 +49,11 @@ const [publikasi,setPublikasi]=useState()
 //   }
 
    async function loadUsersData() {
-      
-    setData(dataBerita.sort((a,b)=>a.hari-b.hari)) // BUAT NGURUTKAN <<<<<<<<<<<<
+    const today = new Date();
+    const monthIndex = today.getMonth();
+    setData(dataBerita.sort((a,b)=>a.hari-b.hari).filter((item)=>{
+        return item.bulan === tanggal.$M+1
+    })) // BUAT NGURUTKAN <<<<<<<<<<<<
     setJumlah(dataBerita.length)
   
 
@@ -106,7 +109,7 @@ const [publikasi,setPublikasi]=useState()
  const filterBulan = data.filter((item)=>{
         return item.bulan === tanggal.$M+1
     })
-    
+    console.log("filter bulan",filterBulan)
     bulanAtauTanggal === "tanggal" ? setData(filterTanggal.sort((a,b)=>a.hari-b.hari)):setData(filterBulan.sort((a,b)=>a.hari-b.hari)); setJumlah(filterBulan.length)
     // const jumlahRecord = filterBulan.length
     // setJumlah(jumlahRecord)
