@@ -22,8 +22,18 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Box  from '@mui/material/Tab';
 import {dataBerita} from "./DataLocal"
 import LogoPengayoman from "../Flag_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.svg.png"
-
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Collapse from '@mui/material/Collapse';
+import ListItemText from '@mui/material/ListItemText';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
 
 const MTable = () => {
 
@@ -36,7 +46,10 @@ const [bulan,setBulan]=useState()
 const [bulanAtauTanggal,setBulanAtauTanggal]=useState()
 const [active,setActive]=useState(false)
 const [publikasi,setPublikasi]=useState()
-
+const [sosialMedia,setSosialMedia]=useState()
+const [eksternal,setEksternal]=useState()
+const [internal,setInternal]=useState()
+const [open, setOpen] = React.useState(false);
 
   useEffect(()=>{
     loadUsersData();
@@ -52,7 +65,7 @@ const [publikasi,setPublikasi]=useState()
     const today = new Date();
     const monthIndex = today.getMonth();
     setData(dataBerita.sort((a,b)=>a.hari-b.hari).filter((item)=>{
-        return item.bulan === tanggal.$M+1
+        return item.bulan === monthIndex+1
     })) // BUAT NGURUTKAN <<<<<<<<<<<<
     setJumlah(dataBerita.length)
   
@@ -103,10 +116,10 @@ const [publikasi,setPublikasi]=useState()
         tanggal.$M === 11 ? setBulan("Desember"):setBulan("-")
 
       
-      const filterTanggal = data.filter((item)=>{
+      const filterTanggal = dataBerita.filter((item)=>{
         return item.hari === tanggal.$D && item.bulan===tanggal.$M+1
     })
- const filterBulan = data.filter((item)=>{
+ const filterBulan = dataBerita.filter((item)=>{
         return item.bulan === tanggal.$M+1
     })
     console.log("filter bulan",filterBulan)
@@ -115,6 +128,9 @@ const [publikasi,setPublikasi]=useState()
     // setJumlah(jumlahRecord)
     
       let count = 0
+      let countSocialMedia = 0
+      let countEksternal = 0
+      let countInternal = 0
     if(bulanAtauTanggal === "tanggal"){
   for(let i=0;i<filterTanggal.length;i++){
     filterTanggal[i].website === ""?count=count:count+=1
@@ -138,9 +154,58 @@ const [publikasi,setPublikasi]=useState()
     filterBulan[i].rri === ""?count=count:count+=1
   }
     }
+    if(bulanAtauTanggal === "tanggal"){
+  for(let i=0;i<filterTanggal.length;i++){
+    filterTanggal[i].website === ""?countInternal=countInternal:countInternal+=1
+
+  }
+    }else{
+      for(let i=0;i<filterBulan.length;i++){
+    filterBulan[i].website === ""?countInternal=countInternal:countInternal+=1
+   
+  }
+    }
+
+
+    if(bulanAtauTanggal === "tanggal"){
+  for(let i=0;i<filterTanggal.length;i++){
+    
+    filterTanggal[i].instagram === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    filterTanggal[i].twitter === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    filterTanggal[i].facebook === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    
+  }
+    }else{
+      for(let i=0;i<filterBulan.length;i++){
+    filterBulan[i].instagram === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    filterBulan[i].twitter === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    filterBulan[i].facebook === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+  }
+    }
+
+
+    if(bulanAtauTanggal === "tanggal"){
+  for(let i=0;i<filterTanggal.length;i++){
+
+    filterTanggal[i].kompasiana === ""?countEksternal=countEksternal:countEksternal+=1
+    filterTanggal[i].terasmaluku === ""?countEksternal=countEksternal:countEksternal+=1
+    filterTanggal[i].malukuterkini === ""?countEksternal=countEksternal:countEksternal+=1
+    filterTanggal[i].rri === ""?countEksternal=countEksternal:countEksternal+=1
+  }
+    }else{
+      for(let i=0;i<filterBulan.length;i++){
+
+    filterBulan[i].kompasiana === ""?countEksternal=countEksternal:countEksternal+=1
+    filterBulan[i].terasmaluku === ""?countEksternal=countEksternal:countEksternal+=1
+    filterBulan[i].malukuterkini === ""?countEksternal=countEksternal:countEksternal+=1
+    filterBulan[i].rri === ""?countEksternal=countEksternal:countEksternal+=1
+  }
+    }
 
   setPublikasi(count)
-
+  setSosialMedia(countSocialMedia)
+  setEksternal(countEksternal)
+  setInternal(countInternal)
 
 
 
@@ -179,11 +244,21 @@ const [publikasi,setPublikasi]=useState()
   }
 
   const handleReset = async()=>{
+   
+     const today = new Date();
+    const monthIndex = today.getMonth();
+    setData(dataBerita.sort((a,b)=>a.hari-b.hari).filter((item)=>{
+        return item.bulan === monthIndex+1
+    }))
+
+
     setActive(false)
     setValueSearch("")
-    setData(dataBerita)
     setPublikasi("-")
     setBulanAtauTanggal("")
+    setSosialMedia("-")
+    setEksternal("-")
+    setInternal("-")
 // const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
 //     setValueSearch("")
 //       try {
@@ -240,7 +315,9 @@ const [publikasi,setPublikasi]=useState()
     //     console.error('Error fetching data:', error);
     //   }
   }
-
+ const handleClick = () => {
+    setOpen(!open);
+  };
   return (
 
    
@@ -297,12 +374,81 @@ const [publikasi,setPublikasi]=useState()
           sx={{ m: 1, width: '25ch' }}
           slotProps={{
             input: {
-              startAdornment: <InputAdornment position="start">{bulan} Total</InputAdornment>,
+              startAdornment: <InputAdornment position="start">{bulan} Total Berita</InputAdornment>,
             },
           }}
           variant="filled"
         />
+
+        <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    >
+      
+   <ListItemButton onClick={handleClick}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Rincian" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+     
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+         <TextField
+        
+          
+          disabled="true"
+          value={internal}
+          id="filled-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="start"><NewspaperIcon/>Internal</InputAdornment>,
+            },
+          }}
+          variant="standard"
+          color="warning"
+          focused
+        />
         <TextField
+        
+          
+          disabled="true"
+          value={sosialMedia}
+          id="filled-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="start"><InstagramIcon/><FacebookIcon/><XIcon/></InputAdornment>,
+            },
+          }}
+          variant="standard"
+          color="warning"
+          focused
+        />
+         <TextField
+        
+          
+          disabled="true"
+          value={eksternal}
+          id="filled-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position="start"><NewspaperIcon/>Eksternal</InputAdornment>,
+            },
+          }}
+          variant="standard"
+          color="warning"
+          focused
+        />
+        </List>
+      </Collapse>
+    </List>
+       
+       <TextField
         
           
           disabled="true"
@@ -318,7 +464,6 @@ const [publikasi,setPublikasi]=useState()
           color="warning"
           focused
         />
-       
 </div>
       </div>
     
