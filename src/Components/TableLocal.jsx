@@ -278,12 +278,15 @@ const [open, setOpen] = React.useState(false);
     setActive(true)
     setPage(0)
    
-    const searchList = data.filter((item)=>{
+    const searchList = dataBerita.filter((item)=>{
         return item.judul.toLowerCase().indexOf(valueSearch.toLowerCase()) !== -1;
     })
-    setData(searchList.sort((a,b)=>a.hari-b.hari))
+    setData(searchList.sort((a,b)=>a.hari-b.hari).sort((a,b)=>a.bulan-b.bulan))
 
-  let count = 0
+      let count = 0
+      let countSocialMedia = 0
+      let countEksternal = 0
+      let countInternal = 0
 
   for(let i=0;i<searchList.length;i++){
     searchList[i].website === ""?count=count:count+=1
@@ -295,9 +298,32 @@ const [open, setOpen] = React.useState(false);
     searchList[i].malukuterkini === ""?count=count:count+=1
     searchList[i].rri === ""?count=count:count+=1
   }
+  for(let i=0;i<searchList.length;i++){
+
+    searchList[i].instagram === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    searchList[i].twitter === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+    searchList[i].facebook === ""?countSocialMedia=countSocialMedia:countSocialMedia+=1
+
+  }
+    for(let i=0;i<searchList.length;i++){
+
+    searchList[i].terasmaluku === ""?countEksternal=countEksternal:countEksternal+=1
+    searchList[i].malukuterkini === ""?countEksternal=countEksternal:countEksternal+=1
+    searchList[i].rri === ""?countEksternal=countEksternal:countEksternal+=1
+    searchList[i].kompasiana === ""?countEksternal=countEksternal:countEksternal+=1
+  }
+   for(let i=0;i<searchList.length;i++){
+
+    searchList[i].website === ""?countInternal=countInternal:countInternal+=1
+   
+
+  }
   
-  console.log(count)
+  setJumlah("-")
   setPublikasi(count)  
+  setSosialMedia(countSocialMedia)
+  setEksternal(countEksternal)
+  setInternal(countInternal)
 
 
     
