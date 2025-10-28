@@ -351,7 +351,7 @@ const [open, setOpen] = React.useState(false);
     <div style={{display:"flex",justifyContent:"center"}}>
         
    
-    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1100,tableLayout:"fixed",overflowX:"auto",display:"block"}}>
+    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1100,tableLayout:"fixed",overflowX:"auto",display:"grid",margin:"100px auto 100px"}}>
         
       <div style={{paddingTop:10,paddingLeft:10,paddingBottom:10,justifyContent:"left",display:"flex"}}>
 <div style={{paddingLeft:10,paddingBottom:10}}>
