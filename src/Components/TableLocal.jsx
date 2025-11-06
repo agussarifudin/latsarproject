@@ -259,6 +259,7 @@ const [open, setOpen] = React.useState(false);
     setSosialMedia("-")
     setEksternal("-")
     setInternal("-")
+    setTanggal(dayjs(date))
 // const url = `http://localhost:3004/berita`; // Replace with your JSON server URL
 //     setValueSearch("")
 //       try {
@@ -351,7 +352,7 @@ const [open, setOpen] = React.useState(false);
     <div style={{display:"flex",justifyContent:"center"}}>
         
    
-    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1100,tableLayout:"fixed",overflowX:"auto",display:"grid",margin:"100px auto 100px"}}>
+    <TableContainer component={Paper} style={{margin:"100px 100px",maxWidth:1500,tableLayout:"fixed",overflowX:"auto",display:"grid",margin:"100px auto 100px"}}>
         
       <div style={{paddingTop:10,paddingLeft:10,paddingBottom:10,justifyContent:"left",display:"flex"}}>
 <div style={{paddingLeft:10,paddingBottom:10}}>
@@ -525,14 +526,14 @@ const [open, setOpen] = React.useState(false);
               <TableCell >
                 {row.tanggal}
               </TableCell>
-              <TableCell><Button variant="contained" color={row.website===""?'error':"primary"}href={row.website}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.instagram===""?'error':"primary"}href={row.instagram}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.twitter===""?'error':"primary"}href={row.twitter}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.facebook===""?'error':"primary"}href={row.facebook}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.kompasiana===""?'error':"primary"}href={row.kompasiana}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.terasmaluku===""?'error':"primary"} href={row.terasmaluku}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.malukuterkini===""?'error':"primary"}href={row.malukuterkini}>Link</Button></TableCell>
-              <TableCell><Button variant="contained" color={row.rri===""?'error':"primary"}href={row.rri}>Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.website===""?'error':"primary"}href={row.website} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.instagram===""?'error':"primary"}href={row.instagram} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.twitter===""?'error':"primary"}href={row.twitter} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.facebook===""?'error':"primary"}href={row.facebook} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.kompasiana===""?'error':"primary"}href={row.kompasiana} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.terasmaluku===""?'error':"primary"} href={row.terasmaluku} target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.malukuterkini===""?'error':"primary"}href={row.malukuterkini}target="_blank">Link</Button></TableCell>
+              <TableCell><Button variant="contained" color={row.rri===""?'error':"primary"}href={row.rri} target="_blank">Link</Button></TableCell>
               
                 {/* <Typography fontWeight={"bold"} fontSize={"0.75rem"} color={'white'} 
                 style={{
