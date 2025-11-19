@@ -3897,10 +3897,10 @@ export const dataBerita =  [
       "instagram": "https://www.instagram.com/p/DRMGedMkjhX/?igsh=MWZ1NWV1enVqeHg2cQ==",
       "twitter": "https://x.com/kemenkummaluku/status/1990680739571286380?t=KxGBoYemdx_FgIUJmTHkLg&s=19",
       "facebook": "https://www.facebook.com/share/p/1DcAGcJNDp/",
-      "kompasiana": "",
-      "terasmaluku": "",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/691c1a6ced641508265dfa92/kemenkum-maluku-dampingi-pemeriksaan-substantif-usulan-indikasi-geografis-cengkeh-tuni-buru-selatan",
+      "terasmaluku": "https://terasmaluku.com/daerahku/2025/11/18/kemenkum-maluku-dampingi-pemeriksaan-substantif-usulan-indikasi-geografis-cengkeh-tuni-buru-selatan/",
       "malukuterkini": "",
-      "rri": ""
+      "rri": "https://rri.co.id/ambon/hukum/1981189/kemenkum-maluku-dampingi-pemeriksaan-indikasigeografis-cengkeh-tuni-bursel"
     },
     {
       "judul": "Seminar Aktualisasi Latsar CPNS Kanwil Kemenkum Maluku Tahun 2025 Berjalan Sukses",
@@ -3912,10 +3912,10 @@ export const dataBerita =  [
       "instagram": "https://www.instagram.com/p/DRMXKnlkgnZ/?igsh=YzlxcHFyZ2w4Z3pp",
       "twitter": "https://x.com/kemenkummaluku/status/1990717420630130859?t=s1KzbQzxy7oDPBynCfPoGg&s=19",
       "facebook": "https://www.facebook.com/share/p/1NLURAY7ab/",
-      "kompasiana": "",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/691c3ce634777c243336eaa2/seminar-aktualisasi-latsar-cpns-kanwil-kemenkum-maluku-tahun-2025-berjalan-sukses",
       "terasmaluku": "",
       "malukuterkini": "",
-      "rri": ""
+      "rri": "https://rri.co.id/ambon/daerah/1981518/seminar-aktualisasi-latsar-cpns-kemenkum-maluku-sukses"
     }
     
   ]
