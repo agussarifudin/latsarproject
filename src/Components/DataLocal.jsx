@@ -4155,7 +4155,7 @@ export const dataBerita =  [
       "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/69244a16ed64151116788bc2/peacemaker-justice-award-2025-resmi-dibuka-dorong-perdamaian-di-tingkat-desa",
       "terasmaluku": "",
       "malukuterkini": "",
-      "rri": ""
+      "rri": "https://rri.co.id/ambon/nasional/1995522/pja-2025-resmi-dibuka-dorong-perdamaian-di-tingkat-desa"
     },
     {
       "judul": "3 ASN Kemenkum Maluku Ikut Ukom: Upaya Tingkatkan Profesionalisme Analis dan Penyuluh Hukum",
@@ -4231,6 +4231,66 @@ export const dataBerita =  [
       "terasmaluku": "",
       "malukuterkini": "https://www.malukuterkini.com/2025/11/24/kanwil-kemenkum-maluku-ikuti-finalisasi-pipk-2025/",
       "rri": ""
+    },
+    {
+      "judul": "Dukung Pembinaan ASN Berintegritas, Kemenkum Maluku Ikuti Pembukaan Pelatihan FMD PPPK 2025",
+      "tanggal": "25-11-2025",
+      "hari": 25,
+      "bulan": 11,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/dukung-pembinaan-asn-berintegritas-kemenkum-maluku-ikuti-pembukaan-pelatihan-fmd-pppk-2025",
+      "instagram": "https://www.instagram.com/p/DRd6nfekruH/?igsh=MW80OWIzY3NuM2dlbg==",
+      "twitter": "https://x.com/kemenkummaluku/status/1993188502373367922?t=s4fUaAOysKrbHZRMGed5zw&s=19",
+      "facebook": "https://www.facebook.com/share/p/1BSupgwjby/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/6925374b34777c15bc3f4b32/dukung-pembinaan-asn-berintegritas-kemenkum-maluku-ikuti-pembukaan-pelatihan-fmd-pppk-2025",
+      "terasmaluku": "https://terasmaluku.com/nasional/2025/11/25/dukung-pembinaan-asn-berintegritas-kemenkum-maluku-ikuti-pembukaan-pelatihan-fmd-pppk-2025/",
+      "malukuterkini": "https://www.malukuterkini.com/2025/11/25/jajaran-kanwil-kemenkum-maluku-ikuti-pelatihan-fmd-pppk-2025/",
+      "rri": "https://rri.co.id/ambon/daerah/1997236/kemenkum-maluku-hadiri-pembukaan-pelatihan-fmd-pppk-2025"
+    },
+    {
+      "judul": "Kemenkum Maluku Ikuti Sosialisasi Program Pemagangan Lulusan Perguruan Tinggi Gelombang III",
+      "tanggal": "25-11-2025",
+      "hari": 25,
+      "bulan": 11,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/kemenkum-maluku-ikuti-sosialisasi-program-pemagangan-lulusan-perguruan-tinggi-gelombang-iii",
+      "instagram": "https://www.instagram.com/p/DRebfR4kmo_/?igsh=MTh6MXRjc3Q1Z3VldQ==",
+      "twitter": "https://x.com/kemenkummaluku/status/1993260956391293148?t=bzApL4ufduYh7nzisl0W1Q&s=19",
+      "facebook": "https://www.facebook.com/share/p/1CkEzuCkz2/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/69257bbf3e952f43c02fd292/kemenkum-maluku-ikuti-sosialisasi-program-pemagangan-lulusan-perguruan-tinggi-gelombang-iii",
+      "terasmaluku": "https://terasmaluku.com/nasional/2025/11/25/kemenkum-maluku-ikuti-sosialisasi-program-pemagangan-lulusan-perguruan-tinggi-gelombang-iii/",
+      "malukuterkini": "",
+      "rri": "https://rri.co.id/ambon/daerah/1997249/kanwil-kemenkum-maluku-ikuti-sosialisasi-program-pemagangan-lulusan-pt"
+    },
+    {
+      "judul": "La Margono Hadiri Puncak Penganugerahan PJA 2025",
+      "tanggal": "26-11-2025",
+      "hari": 26,
+      "bulan": 11,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/la-margono-hadiri-puncak-penganugerahan-pja-2025",
+      "instagram": "https://www.instagram.com/p/DRhAt8REr7X/?igsh=eDQzNTFzeGdibjFn",
+      "twitter": "https://x.com/kemenkummaluku/status/1993624083247104142?t=EdqzojhJosye5QoqXXgazQ&s=19",
+      "facebook": "https://www.facebook.com/share/p/17Rsc57LrT/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/6926cea25479c341e0399b52/la-margono-hadiri-puncak-penganugerahan-pja-2025",
+      "terasmaluku": "",
+      "malukuterkini": "",
+      "rri": "https://rri.co.id/ambon/hukum/2000267/la-margono-hadiri-puncak-penganugerahan-pja-2025"
+    },
+    {
+      "judul": "Rapat Evaluasi B11 2025: Kemenkum Maluku Mantapkan Arah Kinerja Melalui Analisa Komprehensif",
+      "tanggal": "26-11-2025",
+      "hari": 26,
+      "bulan": 11,
+      "tahun": 2025,
+      "website": "https://maluku.kemenkum.go.id/berita-utama/rapat-evaluasi-b11-2025-kemenkum-maluku-mantapkan-arah-kinerja-melalui-analisa-komprehensif",
+      "instagram": "https://www.instagram.com/p/DRhHyDEEkSs/?igsh=cGp4c2ZiNGFqeXEy",
+      "twitter": "https://x.com/kemenkummaluku/status/1993639099920740745?t=FeBRHzurFUejUaKxRXMiKw&s=19",
+      "facebook": "https://www.facebook.com/share/p/1A9wNq1qpP/",
+      "kompasiana": "https://www.kompasiana.com/kanwilkemenkumhammaluku3864/6926de8334777c7b2f17dd42/rapat-evaluasi-b11-2025-kemenkum-maluku-mantapkan-arah-kinerja-melalui-analisa-komprehensif",
+      "terasmaluku": "https://terasmaluku.com/ambonku/2025/11/26/rapat-evaluasi-b11-2025-kemenkum-maluku-mantapkan-arah-kinerja-melalui-analisa-komprehensif/",
+      "malukuterkini": "",
+      "rri": "https://rri.co.id/ambon/hukum/2000287/kemenkum-maluku-mantapkan-arah-kinerja-melalui-analisa-komprehensif"
     }
     
   ]
